@@ -27,14 +27,13 @@ body > *, .main-container > *{
 }
 
 .play-nav-container{
-  height: 200px;
+  height: 100px;
   flex-shrink: 0;
 }
 
 .main-content-container{
   flex-grow: 1;
   overflow: auto;
-  position: relative;
 }
 
 .upgrade-bar{
@@ -79,4 +78,10 @@ body > *, .main-container > *{
   max-width: 700px  2 CARD IN LINEA + 2, 
   max-width: 600px  2 CARD IN LINEA + 2, BARRA LATERALE STRETTA
  */
+
+@media screen and (max-width: 600px){
+  .navbar{
+    width: calc(200px / 5);
+  }
+}
 
