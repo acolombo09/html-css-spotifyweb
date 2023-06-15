@@ -34,23 +34,27 @@ body > *, .main-container > *{
 .main-content-container{
   flex-grow: 1;
   overflow: auto;
+  position: relative;
 }
 
 .upgrade-bar{
   height: 100px;
-  flex-shrink: 0;
-  overflow: hidden;
-  position: relative;
-  border: 1px dashed red;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid red;
+}
+
+.content-container{
+  border: 1px solid blue;
+  margin-top: 100px;
 }
 
 .square{
   width: 210px;
   height: 30px;
   border: 1px dashed green;
-  position: absolute;
-  top: 0;
-  right: 0;
   padding: .3rem 1rem;
   text-align: center;
 }
