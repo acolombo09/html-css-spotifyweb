@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  /* Hidden per sicurezza in caso di errore nei figli, nascondo la barra di default*/
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Misure temporanee, cambiale una volta che inserisci i contenuti */
+body > *, .main-container > *{
+  min-height: 100px;
+  min-width: 100px;
+  border: 1px solid red;
+}
+
+.main-container{
+  flex-grow: 1;
+  /* Deve scorrere solo la sezione coi contenuti e le card */
+  overflow: auto;
+  display: flex;
+}
+
+.play-nav-container{
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.main-content-container{
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.navbar{
+  width: 200px;
+  overflow: auto;
+  /* Per evitare che il fratello si allarghi troppo, schiacciando la navbar 
+    lo shrink è attivo di base.*/
+  flex-shrink: 0;
+}
+
+/* Breakpoints per media query:
+  max-width: 1100px
+  max-width: 700px
+  max-width: 600px
+ */
+
