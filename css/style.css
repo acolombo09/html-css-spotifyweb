@@ -36,6 +36,25 @@ body > *, .main-container > *{
   overflow: auto;
 }
 
+.upgrade-bar{
+  height: 100px;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+  border: 1px dashed red;
+}
+
+.square{
+  width: 210px;
+  height: 30px;
+  border: 1px dashed green;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .3rem 1rem;
+  text-align: center;
+}
+
 .navbar{
   width: 200px;
   overflow: auto;
@@ -44,9 +63,17 @@ body > *, .main-container > *{
   flex-shrink: 0;
 }
 
+/* *** BUTTONS *** */
+
+
+/* PER LA BARRA EFFETTUA UPGRADE, PROVA CON FLEX SHRINK: 0 E LA PARTE CONTENUTI
+  IN FLEX GROW 1, SAREBBE LA LOGICA AL CONTRARIO RISPETTO A CIO' CHE HO FATTO
+   CON IL BODY E IL CONTAINER */
+
 /* Breakpoints per media query:
-  max-width: 1100px
-  max-width: 700px
-  max-width: 600px
+  layout (no media query) max px: 6 CARD IN LINEA + 2
+  max-width: 1100px 4 CARD IN LINEA + 2, 
+  max-width: 700px  2 CARD IN LINEA + 2, 
+  max-width: 600px  2 CARD IN LINEA + 2, BARRA LATERALE STRETTA
  */
 
