@@ -36,6 +36,40 @@ body > *, .main-container > *{
   overflow: auto;
 }
 
+.recently-played{
+  
+}
+
+.row{
+  display: flex;
+}
+
+.col-1-6{
+  width: calc(100% / 6);
+  aspect-ratio: 1/1;
+  border: 1px dashed blue;
+}
+
+.cover-img{
+  width: 100%;
+  aspect-ratio: 1/1;
+  border: 1px dashed green;
+}
+
+.cover-img img{
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.rounded{
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.title{
+  text-align: center;
+}
+
 .upgrade-bar{
   height: 100px;
   width: 100%;
