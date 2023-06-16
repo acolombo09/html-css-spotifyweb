@@ -37,11 +37,13 @@ body > *, .main-container > *{
 }
 
 .recently-played{
-  
+  border: 1px solid yellow;
+  padding: 1rem;
 }
 
 .row{
   display: flex;
+  border: 1px dashed orange;
 }
 
 .col-1-6{
@@ -50,7 +52,7 @@ body > *, .main-container > *{
   border: 1px dashed blue;
 }
 
-.cover-img{
+.cover-img, .cover-img-rounded{
   width: 100%;
   aspect-ratio: 1/1;
   border: 1px dashed green;
@@ -61,8 +63,9 @@ body > *, .main-container > *{
   object-fit: contain;
 }
 
-.rounded{
+.cover-img-rounded img{
   max-width: 100%;
+  object-fit: contain;
   border-radius: 50%;
 }
 
