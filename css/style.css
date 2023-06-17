@@ -10,6 +10,7 @@ body{
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Misure temporanee, cambiale una volta che inserisci i contenuti */
@@ -36,6 +37,29 @@ body > *, .main-container > *{
   overflow: auto;
 }
 
+.crunchy-container{
+  border: 1px dashed green;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.crunchy-menu{
+  border: 1px dashed red;
+}
+
+.crunchy-menu ul{
+  list-style: none;
+  text-align: center;
+}
+
+.crunchy-menu ul li {
+  display: inline-block;
+  padding: 1rem .9rem;
+  text-decoration: none;
+  font-size: .6rem;
+}
+
 .recently-played{
   border: 1px solid yellow;
   padding: 1rem;
@@ -44,6 +68,7 @@ body > *, .main-container > *{
 .row{
   display: flex;
   border: 1px dashed orange;
+  gap: .5rem;
 }
 
 .col-1-6{
@@ -87,7 +112,7 @@ body > *, .main-container > *{
 }
 
 .square{
-  width: 210px;
+  width: 250px;
   height: 30px;
   border: 1px dashed green;
   padding: .3rem 1rem;
@@ -105,16 +130,23 @@ body > *, .main-container > *{
 /* *** BUTTONS *** */
 
 
-/* PER LA BARRA EFFETTUA UPGRADE, PROVA CON FLEX SHRINK: 0 E LA PARTE CONTENUTI
-  IN FLEX GROW 1, SAREBBE LA LOGICA AL CONTRARIO RISPETTO A CIO' CHE HO FATTO
-   CON IL BODY E IL CONTAINER */
-
 /* Breakpoints per media query:
   layout (no media query) max px: 6 CARD IN LINEA + 2
   max-width: 1100px 4 CARD IN LINEA + 2, 
   max-width: 700px  2 CARD IN LINEA + 2, 
   max-width: 600px  2 CARD IN LINEA + 2, BARRA LATERALE STRETTA
+
+  PER LE CARD, NON USARE WRAP MA FAI DIRETTAMENTE CALC /6, /4, /2 IN BASE
+  ALLA RICHIESTA GRAFICA DELL'ESERCIZIO IN BASE AI PX DELLO SCHERMO
  */
+
+@media screen and (max-width: 1100px){
+  
+}
+
+@media screen and (max-width: 700px){
+  
+}
 
 @media screen and (max-width: 600px){
   .navbar{
