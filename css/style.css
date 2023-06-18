@@ -123,6 +123,7 @@ body > *, .main-container > *{
 }
 
 .play-nav-container{
+  width: 100%;
   height: 100px;
   flex-shrink: 0;
   display: flex;
@@ -137,7 +138,7 @@ body > *, .main-container > *{
 
 .play-section{
   border: 1px dashed rgb(130, 231, 130);
-  width: 400px;
+  width: 40%;
   aspect-ratio: 1/1;
 }
 
