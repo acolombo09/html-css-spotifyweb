@@ -27,11 +27,6 @@ body > *, .main-container > *{
   display: flex;
 }
 
-.play-nav-container{
-  height: 100px;
-  flex-shrink: 0;
-}
-
 .main-content-container{
   flex-grow: 1;
   overflow: auto;
@@ -125,6 +120,25 @@ body > *, .main-container > *{
   /* Per evitare che il fratello si allarghi troppo, schiacciando la navbar 
     lo shrink è attivo di base.*/
   flex-shrink: 0;
+}
+
+.play-nav-container{
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.preview, .volume-section{
+  width: 200px;
+  aspect-ratio: 1/1;
+  border: 1px dashed green;
+}
+
+.play-section{
+  border: 1px dashed rgb(130, 231, 130);
+  width: 400px;
+  aspect-ratio: 1/1;
 }
 
 /* *** BUTTONS *** */
