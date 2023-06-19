@@ -409,6 +409,10 @@ body > *, .main-container > *{
   font-size: 2rem;
 }
 
+.icons-list li:hover{
+  transform: scale(1.1);
+}
+
 .play-progress-bar{
   max-width: 100%;
   border: 1px dashed blue;
