@@ -22,13 +22,6 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Misure temporanee, cambiale una volta che inserisci i contenuti */
-body > *, .main-container > *{
-  min-height: 100px;
-  min-width: 100px;
-  border: 1px solid red;
-}
-
 .main-container{
   flex-grow: 1;
   /* Deve scorrere solo la sezione coi contenuti e le card */
@@ -52,23 +45,47 @@ body > *, .main-container > *{
   color: var(--font-color-secondary)
 }
 
+.created-for, .popular h2, h4{
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
 .recently-played{
   border: 1px solid yellow;
   padding: 1rem;
+  width: 100%;
 }
 
 .row{
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   border: 1px dashed orange;
   gap: .5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .col-1-6{
   max-width: calc(100% / 6);
   aspect-ratio: 1/1;
   border: 1px dashed blue;
+}
+
+.cover-img-layover{
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
+  display: none;
+  color: var(--font-color-primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  background-color: rgb(0, 0, 0, 0.3);
 }
 
 .cover-img, .cover-img-rounded{
@@ -90,6 +107,11 @@ body > *, .main-container > *{
 
 .title{
   text-align: center;
+  width: 100%;
+}
+
+.title > *{
+  padding-top: .5rem;
 }
 
 /* *** MAIN CONTENT - UPGRADE BAR *** */
@@ -395,6 +417,7 @@ body > *, .main-container > *{
 }
 
 .icons-list{
+  max-width: 100%;
   list-style: none;
   font-size: 1.5rem;
   color: var(--font-color-primary);
@@ -414,7 +437,7 @@ body > *, .main-container > *{
 }
 
 .play-progress-bar{
-  max-width: 100%;
+  width: 100%;
   border: 1px dashed blue;
   display: flex;
   justify-content: space-between;
@@ -454,20 +477,21 @@ body > *, .main-container > *{
 
 /* Breakpoints per media query:
   layout (no media query) max px: 6 CARD IN LINEA + 2
-  max-width: 1100px 4 CARD IN LINEA + 2, 
-  max-width: 700px  2 CARD IN LINEA + 2, 
-  max-width: 600px  2 CARD IN LINEA + 2, BARRA LATERALE STRETTA
 
   PER LE CARD, NON USARE WRAP MA FAI DIRETTAMENTE CALC /6, /4, /2 IN BASE
   ALLA RICHIESTA GRAFICA DELL'ESERCIZIO IN BASE AI PX DELLO SCHERMO
  */
 
 @media screen and (max-width: 1100px){
-  
+  .col-1-6 .col-1-6-ml{
+    width: calc(100% / 4);
+  }
 }
 
 @media screen and (max-width: 700px){
-  
+  .col-1-6 .col-1-6-ms{
+    width: calc(100% / 2);
+  }
 }
 
 @media screen and (max-width: 600px){
