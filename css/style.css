@@ -56,7 +56,6 @@ body > *, .main-container > *{
 }
 
 .recently-played{
-  border: 1px solid yellow;
   padding: 1rem;
   width: 100%;
 }
@@ -66,16 +65,14 @@ body > *, .main-container > *{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 1px dashed orange;
   gap: .5rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 .col-1-6{
-  max-width: calc(100% / 6);
+  width: calc((100% / 6) - (1rem));
   aspect-ratio: 1/1;
-  border: 1px dashed blue;
 }
 
 .cover-img-layover{
@@ -90,13 +87,20 @@ body > *, .main-container > *{
   /* display: flex;
   justify-content: center;
   align-items: center; */
+}
+
+.cover-img-layover:hover{
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(0, 0, 0, 0.3);
 }
 
 .cover-img, .cover-img-rounded{
   width: 100%;
   aspect-ratio: 1/1;
-  border: 1px dashed green;
+  position: relative;
 }
 
 .cover-img img{
@@ -426,6 +430,14 @@ body > *, .main-container > *{
   padding-left: .5rem;
 }
 
+.preview-title a{
+  text-decoration: none;
+}
+
+.preview-title a, h6:hover{
+  color: var(--font-color-primary);
+}
+
 .preview-interactions{
   width: fit-content;
   flex-direction: row;
@@ -439,8 +451,11 @@ body > *, .main-container > *{
   padding-left: .5rem;
 }
 
+.preview-interactions a:hover{
+  color: var(--font-color-primary);
+}
+
 .play-section{
-  border: 1px dashed rgb(130, 231, 130);
   width: 40%;
   height: 100%;
   display: flex;
@@ -563,14 +578,14 @@ input[type="range"] {
  */
 
 @media screen and (max-width: 1100px){
-  .col-1-6 .col-1-6-ml{
-    width: calc(100% / 4);
+  .col-1-6-ml{
+    width: calc((100% / 4) - (1rem));
   }
 }
 
 @media screen and (max-width: 700px){
-  .col-1-6 .col-1-6-ms{
-    width: calc(100% / 2);
+  .col-1-6-ms{
+    width: calc((100% / 2) - (1rem));
   }
 }
 
