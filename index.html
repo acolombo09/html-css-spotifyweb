@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <link rel="stylesheet" href="css/style.css">
   <title>HTML-CSS | Spotify Web</title>
 </head>
@@ -18,9 +21,9 @@
         </div>
         <div class="sidebar-links">
           <ul>
-            <li><a href=""><span class="link-text">Home</span></a></li>
-            <li><a href=""><span class="link-text">Cerca</span></a></li>
-            <li><a href=""><span class="link-text">La tua libreria</span></a></li>
+            <li><a href=""><i class="fa-solid fa-home"></i><span class="link-text">Home</span></a></li>
+            <li><a href=""><i class="fa-solid fa-magnifying-glass"></i><span class="link-text">Cerca</span></a></li>
+            <li><a href=""><i class="fa-solid fa-lines-leaning fa-flip-horizontal"></i><span class="link-text">La tua libreria</span></a></li>
           </ul>
         </div>
         <div class="playlist-container">
@@ -43,9 +46,9 @@
           </div>
           <div class="user-section">
             <ul class="sidebar-list">
-              <li><a href=""><span>Installa App</span></a></li>
-              <li class="border-bottom"></li>
-              <li><a href=""><span>John Doe</span></a></li>
+              <li id="app-install"><i class="fa-regular fa-circle-down"></i><a href=""><span class="link-text">Installa App</span></a></li>
+              <li><hr></li>
+              <li id="user-id"><i class="fa-thin fa-circle-user"></i><a href=""><span class="link-text">John Doe</span></a></li>
             </ul>
           </div>
         </div>

@@ -221,11 +221,20 @@ body > *, .main-container > *{
 
 .sidebar-links ul li a{
   display: inline-block;
-  color: var(--font-color-primary);
+  color: var(--font-color-secondary);
   padding-top: .5rem;
   padding-bottom: .5rem;
   text-decoration: none;
   position: relative;
+}
+
+.sidebar-links ul li i{
+  font-size: 1.5rem;
+  margin-right: .5rem;
+}
+
+.sidebar-links ul li a:hover{
+  color: var(--font-color-primary);
 }
 
 .sidebar-links ul li a:before{
@@ -279,9 +288,21 @@ body > *, .main-container > *{
   margin-top: auto;
 }
 
-.border-bottom{
-  border-bottom: 1px solid white;
+.user-section ul li a{
+  text-decoration: none;
 }
+
+#app-install span{
+  font-size: 1.1rem;
+}
+
+#user-id span{
+  color: var(--font-color-primary);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
 
 /* *** PLAY-NAV *** */
 
@@ -333,8 +354,6 @@ body > *, .main-container > *{
     width: calc(200px / 5);
   }
 
-
-
   .sidebar-logo .logo-nav-l{
     display: none;
   }
@@ -344,8 +363,16 @@ body > *, .main-container > *{
     margin: auto;
   }
 
-  .sidebar-links ul li a{
+  .sidebar-links ul li a .link-text{
     display: none;
+  }
+
+  .sidebar-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
   }
 
   .playlist-container{
