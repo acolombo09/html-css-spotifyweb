@@ -22,6 +22,11 @@ body{
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body > *, .main-container > *{
+  min-height: 100px;
+  min-width: 100px;
+}
+
 .main-container{
   flex-grow: 1;
   /* Deve scorrere solo la sezione coi contenuti e le card */
@@ -133,6 +138,7 @@ body{
   max-height: 3rem;
   border: 1px solid white;
   padding: .9rem .5rem;
+  margin-right: 1rem;
   text-align: center;
   color: var(--font-color-primary);
   background-color: var(--bg-color-upbar);
@@ -386,10 +392,51 @@ body{
   color: var(--font-color-secondary);
 }
 
-.preview, .volume-section{
+.preview{
   width: 200px;
+  height: 100%;
+  padding: 1.2rem .5rem 1.2rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.preview-cover, .preview-title, .preview-interactions{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.preview-cover{
+  width: 30%;
+  align-items: center;
+}
+
+.preview-cover img{
+  width: 100%;
   aspect-ratio: 1/1;
-  border: 1px dashed green;
+  object-fit: contain;
+}
+
+.preview-title{
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: .5rem;
+}
+
+.preview-interactions{
+  width: fit-content;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.preview-interactions a{
+  text-decoration: none;
+  color: var(--font-color-secondary);
+  padding-left: .5rem;
 }
 
 .play-section{
@@ -405,7 +452,6 @@ body{
 .play-section-icons{
   height: 50%;
   width: 100%;
-  border: 1px solid red;
 }
 
 .play-section-icons ul{
@@ -413,7 +459,6 @@ body{
   justify-content: center;
   align-items: center;
   height: 100%;
-  
 }
 
 .icons-list{
@@ -438,7 +483,6 @@ body{
 
 .play-progress-bar{
   width: 100%;
-  border: 1px dashed blue;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -451,11 +495,9 @@ body{
   font-size: .6rem;
   font-weight: bold;
   color: var(--font-color-primary);
-  border: 1px dashed red;
 }
 
 .play-progress-bar .progress-bar-percentage{
-  border: 1px dashed orange;
   width: 80%;
   height: 6px;
   border-radius: 6px;
@@ -473,6 +515,44 @@ body{
   width: 30%;
   background-color: var(--font-color-primary);
   height: 100%;
+}
+
+.volume-section{
+  max-width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.volume-section ul{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.volume-list{
+  width: 100%;
+  list-style: none;
+  font-size: 1rem;
+  color: var(--font-color-primary);
+}
+
+.volume-list li{
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.slidecontainer{
+  width: 100%;
+}
+
+input[type="range"] {
+  width: 100%;
 }
 
 /* Breakpoints per media query:
