@@ -163,26 +163,74 @@ body > *, .main-container > *{
   background-color: var(--bg-color-sidebar);
   display: flex;
   flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .sidebar-logo{
   max-width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.sidebar-logo .logo-nav-l{
+  height: 40px;
+}
+
+.sidebar-logo .logo-nav-s{
+  height: 40px;
+  display: none;
 }
 
 .sidebar-links{
   max-width: 100%;
   color: var(--font-color-secondary);
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
-.sidebar-links ul li{
+.sidebar-links ul{
+  list-style: none;
   padding-top: .5rem;
   padding-bottom: .5rem;
 }
 
+.sidebar-links ul li a{
+  display: inline-block;
+  color: var(--font-color-primary);
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  text-decoration: none;
+  position: relative;
+}
+
+.sidebar-links ul li a:before{
+  content: "";
+  height: 100%;
+  width: 6px;
+  background-color: greenyellow;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1rem;
+  /* opacity: 0; */
+}
+
+/* .sidebar-links ul li a .active:before{
+  opacity: 1;
+} */
+
+.playlist-container{
+  border: 1px dashed blue;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  flex-grow: 1;
+}
+
 .playlist-upper{
-  padding: 1rem;
+  border: 1px dashed greenyellow;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .playlist-container span{
@@ -190,12 +238,23 @@ body > *, .main-container > *{
 }
 
 .playlist-lower{
+  border: 1px dashed greenyellow;
   overflow: auto;
+  flex-grow: 1;
 }
 
 .playlist-name{
   padding: 1rem;
   color: var(--font-color-secondary);
+}
+
+.user-section{
+  border: 1px dashed greenyellow;
+  margin-top: auto;
+}
+
+.border-bottom{
+  border-bottom: 1px solid white;
 }
 
 /* *** PLAY-NAV *** */
@@ -247,5 +306,23 @@ body > *, .main-container > *{
   .sidebar{
     width: calc(200px / 5);
   }
-}
 
+
+
+  .sidebar-logo .logo-nav-l{
+    display: none;
+  }
+  
+  .sidebar-logo .logo-nav-s{
+    display: block;
+    margin: auto;
+  }
+
+  .sidebar-links ul li a{
+    display: none;
+  }
+
+  .playlist-container{
+    display: none;
+  }
+}
