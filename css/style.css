@@ -373,11 +373,80 @@ body > *, .main-container > *{
 .play-section{
   border: 1px dashed rgb(130, 231, 130);
   width: 40%;
-  aspect-ratio: 1/1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* *** BUTTONS *** */
+.play-section-icons{
+  height: 50%;
+  width: 100%;
+  border: 1px solid red;
+}
 
+.play-section-icons ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  
+}
+
+.icons-list{
+  list-style: none;
+  font-size: 1.5rem;
+  color: var(--font-color-primary);
+}
+
+.icons-list li{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.icons-list li .fa-circle-play{
+  font-size: 2rem;
+}
+
+.play-progress-bar{
+  max-width: 100%;
+  border: 1px dashed blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-bar-time{
+  width: 10%;
+  margin: 0 10px;
+  text-align: center;
+  font-size: .6rem;
+  font-weight: bold;
+  color: var(--font-color-primary);
+  border: 1px dashed red;
+}
+
+.play-progress-bar .progress-bar-percentage{
+  border: 1px dashed orange;
+  width: 80%;
+  height: 6px;
+  border-radius: 6px;
+  background-color: var(--font-color-secondary);
+  cursor: pointer;
+}
+
+.progress-bar-percentage .grey-bar{
+  width: 100%;
+  background-color: var(--font-color-secondary);
+  height: 100%;
+}
+
+.progress-bar-percentage .white-bar{
+  width: 30%;
+  background-color: var(--font-color-primary);
+  height: 100%;
+}
 
 /* Breakpoints per media query:
   layout (no media query) max px: 6 CARD IN LINEA + 2
