@@ -167,18 +167,35 @@ body > *, .main-container > *{
 
 .sidebar-logo{
   max-width: 100%;
-  
 }
 
 .sidebar-links{
   max-width: 100%;
   color: var(--font-color-secondary);
-  
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .sidebar-links ul li{
   padding-top: .5rem;
   padding-bottom: .5rem;
+}
+
+.playlist-upper{
+  padding: 1rem;
+}
+
+.playlist-container span{
+  color: var(--font-color-secondary);
+}
+
+.playlist-lower{
+  overflow: auto;
+}
+
+.playlist-name{
+  padding: 1rem;
+  color: var(--font-color-secondary);
 }
 
 /* *** PLAY-NAV *** */
